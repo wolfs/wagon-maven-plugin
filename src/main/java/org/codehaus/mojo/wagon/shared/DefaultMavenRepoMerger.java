@@ -148,6 +148,9 @@ public class DefaultMavenRepoMerger
 
             // Merge and write back to staged metadata to replace the remote one
             existing.merge( staged );
+            if (! staged.getVersioning().getSnapshotVersions().isEmpty()) {
+                existing.getVersioning().setSnapshotVersions(staged.getVersioning().getSnapshotVersions());
+            }
 
             stagedMetadataWriter = new FileWriter( stagedMetadataFile );
             xppWriter.write( stagedMetadataWriter, existing );
