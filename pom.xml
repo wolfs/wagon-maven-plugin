@@ -19,7 +19,7 @@
     recursive upload, download, and list directory content functionality.
   </description>
 
-  <version>1.0-beta-5-snapshot-uploads-2-SNAPSHOT</version>
+  <version>1.0-beta-5-snapshot-uploads-1.0</version>
 
   <inceptionYear>2008</inceptionYear>
 
@@ -163,26 +163,6 @@
     </plugins>
 
   </build>
-
-  <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-changes-plugin</artifactId>
-        <version>2.6</version>
-        <configuration>
-          <issueLinkTemplate>%URL%/%ISSUE%</issueLinkTemplate>
-        </configuration>
-        <reportSets>
-          <reportSet>
-            <reports>
-              <report>changes-report</report>
-            </reports>
-          </reportSet>
-        </reportSets>
-      </plugin>
-    </plugins>
-  </reporting>
 
     <distributionManagement>
         <repository>
