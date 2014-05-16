@@ -148,7 +148,9 @@ public class DefaultMavenRepoMerger
 
             // Merge and write back to staged metadata to replace the remote one
             existing.merge( staged );
-            if (! staged.getVersioning().getSnapshotVersions().isEmpty()) {
+            if (staged.getVersioning() != null &&
+                    staged.getVersioning().getSnapshotVersions() != null &&
+                    ! staged.getVersioning().getSnapshotVersions().isEmpty()) {
                 existing.getVersioning().setSnapshotVersions(staged.getVersioning().getSnapshotVersions());
             }
 

@@ -166,7 +166,8 @@
                       <artifactId>maven-scm-provider-gitexe</artifactId>
                       <version>1.9</version>
                   </dependency>
-              </dependencies>              <configuration>
+              </dependencies>
+              <configuration>
                   <useReleaseProfile>false</useReleaseProfile>
                   <arguments>-Pmojo-release</arguments>
               </configuration>
